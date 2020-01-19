@@ -19,7 +19,7 @@ audio.volume=0.2;
 
 //var music=new Audio();
 
-var playlist=['./sounds/1.mp3','./sounds/keyboard2.mp3','./sounds/1.mp3'];
+var playlist=['./sounds/1.mp3','./sounds/あ.mp3','./sounds/い.mp3','./sounds/う.mp3','./sounds/え.mp3','./sounds/お.mp3','./sounds/か.mp3','./sounds/き.mp3','./sounds/く.mp3','./sounds/け.mp3','./sounds/こ.mp3'];
 
 //音声の連想配列("あいうえお"の50音順を昇順に数値として定義) 例：あ→１、ん→50
 var voiceDictionary={1:'あ',2:'い',3:'う',4:'え',5:'お',6:'か',7:'き',8:'く',9:'け',10:'こ',11:'さ',12:'し',13:'す',14:'せ',15:'そ',16:'た',17:'ち',18:'つ',19:'て',20:'と',21:'な',22:'に',23:'ぬ',24:'ね',25:'の',26:'は',27:'ひ',28:'ふ',29:'へ',30:'ほ',31:'ま',32:'み',33:'む',34:'め',35:'も',36:'や',37:'ゆ',38:'よ',39:'ら',40:'り',41:'る',42:'れ',43:'ろ',44:'わ',45:'を',46:'ん',47:'が',48:'ぎ',49:'ぐ',50:'げ',51:'ご',52:'ざ',53:'じ',54:'ず',55:'ぜ',56:'ぞ',57:'だ',58:'ぢ',59:'づ',60:'で',61:'ど',62:'ば',63:'び',64:'ぶ',65:'べ',66:'ぼ',67:'ぱ',68:'ぴ',69:'ぷ',70:'ぺ',71:'ぽ'};
@@ -102,10 +102,12 @@ function init(){
 //            index=0;
 //        }
 //    });
+    //numbersOfWordの一番最初の文字を格納(index=0)
     var index=0;
     audio.src=playlist[numbersOfWord[index]];
     audio.play();
-
+    
+    //addEventListner('ended')はaudioが終了したことを検知して発火する
     audio.addEventListener('ended',function(){
         index++;
         if(index>numbersOfWord.length){
