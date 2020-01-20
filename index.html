@@ -16,9 +16,11 @@
             <form id="form1">
                 <ul>
                     <li><p>読み上げる文章を入力してください</p></li>
+                    <li><p>※文章はひらがなで入力してください。<br>また、「っ」「ゃ」「ぁ」などの促音などは読み上げることが出来ません。</p></li>
                     <li><textarea name="content" id="yomiage" cols="50" rows="10" placeholder="ここに入力"></textarea></li>
-                    <li><input type="button" name="soundText" value="読み上げる" onClick="kakunin();"></li>
                 </ul>
+                <input id="inputButton" type="button" name="soundText" value="読み上げる" onClick="kakunin();">
+                <input type="reset" value="リセット" id="resetButton" disabled="disabled" onclick="changeDisabled();">
             </form>
         </main>
     </body>
