@@ -7,7 +7,7 @@
         <audio id="audioElement" preload="auto">
             <source src="sounds/1.mp3" type="audio/mp3">
         </audio>
-        <script type="text/javascript" src="js/main.js">
+        <script type="text/javascript" src="js/main_revised.js">
         </script>
     </head>
     <body>
@@ -19,8 +19,8 @@
                     <li><p>※文章はひらがなで入力してください。<br>また、「っ」「ゃ」「ぁ」などの促音などは読み上げることが出来ません。</p></li>
                     <li><textarea name="content" id="yomiage" cols="50" rows="10" placeholder="ここに入力"></textarea></li>
                 </ul>
-                <input id="inputButton" type="button" name="soundText" value="読み上げる" onClick="kakunin();">
-                <input type="reset" value="リセット" id="resetButton" disabled="disabled" onclick="changeDisabled();">
+                <input id="inputButton" type="button" name="soundText" value="読み上げる" onClick="start();">
+                <input type="reset" value="リセット" id="resetButton" disabled="disabled" onclick="doReset();">
             </form>
         </main>
     </body>
